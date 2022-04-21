@@ -8,8 +8,8 @@ public class PlayerDamager : MonoBehaviour
     public PlayerHealthArmorBar playerDamage;
 
     void OnCollisionEnter2D(Collision2D collider) {
-            if (transform.gameObject.CompareTag("Player")) {
+            if (collider.gameObject.CompareTag("Enemy")) {
                 playerDamage.Damage(1);
-        }
+            }
     }
 }

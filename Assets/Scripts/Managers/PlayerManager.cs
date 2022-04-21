@@ -23,4 +23,8 @@ public class PlayerManager : MonoBehaviour
     [Header("Rotating")]
     public float maxRange;
     public float minRange;
+
+
+    [Header("Fort")]
+    public bool fortActive;
 }

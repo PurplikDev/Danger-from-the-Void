@@ -6,7 +6,10 @@ public class EnemyManager : MonoBehaviour
 {
     public WaveManager waveManager;
 
-    private void Update() {
-        
-    }
+    [Header("Health")]
+    public int maxHealth;
+    public int health;
+
+    [Header("Movement")]
+    public float defaultEnemySpeed;
 }

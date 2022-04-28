@@ -70,11 +70,6 @@ public class PlayerHealthArmorBar : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.G)) {
             Heal(1);
         }
-
-        if (Input.GetButtonDown("Fire1") && playerManager.vis > 20) {
-            playerManager.vis -= 20;
-            setVis(playerManager.vis);
-        }
     }
 
     void FixedUpdate()

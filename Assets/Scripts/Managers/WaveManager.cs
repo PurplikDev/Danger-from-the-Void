@@ -9,7 +9,7 @@ public class WaveManager : MonoBehaviour
 
     [Header("Wave Cooldown")]
     public bool waveActive;
-    float waveCooldownTimer = 10f;
+    float waveCooldownTimer = 1f;
     public TextMeshProUGUI waveCooldownDisplay;
     public GameObject waveCooldownPanel;
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4100428655553385822}
   m_Layer: 0
   m_Name: Cloud Spell
-  m_TagString: Untagged
+  m_TagString: CloudSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 4100428656836779034}
   m_Layer: 0
   m_Name: Particle System
-  m_TagString: Untagged
+  m_TagString: CloudSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4851,7 +4851,7 @@ GameObject:
   - component: {fileID: 753087764035119823}
   m_Layer: 0
   m_Name: Circle
-  m_TagString: Untagged
+  m_TagString: CloudSpell
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4932,7 +4932,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

@@ -21,6 +21,10 @@ public class EnemyHealth : MonoBehaviour
     public void Damage(int damage) {
         enemyManager.health -= damage;
         setHealth(enemyManager.health);
+
+        if(enemyManager.health <= 0) {
+            Destroy(gameObject);
+        }
     }
 
     void Heal(int heal) {

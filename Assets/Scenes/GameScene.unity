@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 73546705}
   - component: {fileID: 73546707}
   - component: {fileID: 73546708}
+  - component: {fileID: 73546709}
   m_Layer: 0
   m_Name: Fort
   m_TagString: Untagged
@@ -247,6 +248,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerManager: {fileID: 832790378}
+--- !u!114 &73546709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73546704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d7432c1f124e0c4ab25bc1a687a1182, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fortDamage: {fileID: 832790380}
 --- !u!1 &82270333
 GameObject:
   m_ObjectHideFlags: 0
@@ -336,6 +350,8 @@ GameObject:
   - component: {fileID: 122511872}
   - component: {fileID: 122511875}
   - component: {fileID: 122511874}
+  - component: {fileID: 122511876}
+  - component: {fileID: 122511877}
   m_Layer: 0
   m_Name: Basic Enemy
   m_TagString: Enemy
@@ -460,8 +476,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waveManager: {fileID: 1143081678}
-  maxHealth: 2
-  health: 1
+  maxHealth: 5
+  health: 5
   defaultEnemySpeed: 5
 --- !u!114 &122511875
 MonoBehaviour:
@@ -478,6 +494,33 @@ MonoBehaviour:
   enemyRigidbody2D: {fileID: 122511872}
   enemyManager: {fileID: 122511874}
   playerManager: {fileID: 832790378}
+--- !u!114 &122511876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122511869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f498c4d05e5f867418c9c2bc3652640d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyDamage: {fileID: 122511877}
+--- !u!114 &122511877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122511869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10de76dc5a3731643984e81faa8af8a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyManager: {fileID: 122511874}
+  enemyHealthBarSlider: {fileID: 485565293}
 --- !u!1 &315012625
 GameObject:
   m_ObjectHideFlags: 0

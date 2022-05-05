@@ -6,8 +6,21 @@ public class ProjectileSpell : MonoBehaviour
 {
     public Rigidbody2D spellRB;
 
+    private float lifeTime = 0;
+
     void Update()
     {
-        spellRB.velocity = new Vector2(0, 10);
+        transform.position += transform.up * Time.deltaTime * 25f;
+
+    }
+
+    void FixedUpdate() {
+
+        lifeTime++;
+
+        if(lifeTime > 50) {
+            Destroy(gameObject);
+        }
+
     }
 }

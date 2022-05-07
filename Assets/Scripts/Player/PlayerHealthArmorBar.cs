@@ -62,16 +62,6 @@ public class PlayerHealthArmorBar : MonoBehaviour
         setVis(playerManager.vis);
     }
 
-    void Update() {
-        if(Input.GetKeyDown(KeyCode.Space)) {
-            Damage(1);
-        }
-
-        if (Input.GetKeyDown(KeyCode.G)) {
-            Heal(1);
-        }
-    }
-
     void FixedUpdate()
     {
         if (playerManager.vis < playerManager.maxVis) {

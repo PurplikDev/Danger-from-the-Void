@@ -9,6 +9,7 @@ TagManager:
   - CloudSpell
   - EnemyHealingArea
   - HealingEnemy
+  - EnemySpawners
   layers:
   - Default
   - TransparentFX

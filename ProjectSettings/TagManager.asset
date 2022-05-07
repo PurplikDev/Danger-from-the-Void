@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - ProjectileSpell
   - CloudSpell
+  - EnemyHealingArea
+  - HealingEnemy
   layers:
   - Default
   - TransparentFX
@@ -14,8 +16,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Visual Effects
+  - Objects
   - 
   - 
   - 

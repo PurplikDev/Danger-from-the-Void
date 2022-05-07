@@ -27,7 +27,7 @@ public class EnemyHealth : MonoBehaviour
         }
     }
 
-    void Heal(int heal) {
+    public void Heal(int heal) {
 
         if(enemyManager.health >= enemyManager.maxHealth) {
             return;

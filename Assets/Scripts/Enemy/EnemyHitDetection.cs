@@ -20,9 +20,7 @@ public class EnemyHitDetection : MonoBehaviour
 
             attackCooldown += Time.deltaTime;
 
-            Debug.Log(attackCooldown);
-
-            if(attackCooldown >= 0.5) {
+            if(attackCooldown >= 1.5) {
                 enemyDamage.Damage(1);
 
                 attackCooldown = 0;

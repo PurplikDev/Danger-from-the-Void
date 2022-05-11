@@ -21,17 +21,38 @@ public class WaveManager : MonoBehaviour
 
     [Header("Spawning Credits")]
     public int waveCreadits = 50;
-    public int enemyCredits = 5;
 
 
 
     void NewWave() {
 
-        switch(waveNumber) {
+        int randomSpawnerIndex = Random.Range(1, enemySpawners.Length);
+
+        switch (waveNumber) {
 
             case 1: case 2: case 3:
-                int randomSpawnerIndex = Random.Range(1, enemySpawners.Length);
+                
                 Instantiate(enemies[0], new Vector3(enemySpawners[randomSpawnerIndex].position.x, enemySpawners[randomSpawnerIndex].position.y), Quaternion.identity);
+                break;
+
+            case 4: case 5:
+                int stageTwoRandomEnemyIndex = Random.Range(0, 1);
+                Instantiate(enemies[stageTwoRandomEnemyIndex], new Vector3(enemySpawners[randomSpawnerIndex].position.x, enemySpawners[randomSpawnerIndex].position.y), Quaternion.identity);
+                break;
+
+            case 6: case 7: case 8: case 9: case 10:
+                int stageThreeRandomEnemyIndex = Random.Range(0, 2);
+                Instantiate(enemies[stageThreeRandomEnemyIndex], new Vector3(enemySpawners[randomSpawnerIndex].position.x, enemySpawners[randomSpawnerIndex].position.y), Quaternion.identity);
+                break;
+
+            case 11: case 12: case 13: case 14: case 15:
+                int stageFourRandomEnemyIndex = Random.Range(0, 3);
+                Instantiate(enemies[stageFourRandomEnemyIndex], new Vector3(enemySpawners[randomSpawnerIndex].position.x, enemySpawners[randomSpawnerIndex].position.y), Quaternion.identity);
+                break;
+
+            default:
+                int stageFiveRandomEnemyIndex = Random.Range(0, 3);
+                Instantiate(enemies[stageFiveRandomEnemyIndex], new Vector3(enemySpawners[randomSpawnerIndex].position.x, enemySpawners[randomSpawnerIndex].position.y), Quaternion.identity);
                 break;
         }
         waveNumberDisplay.text = waveNumber.ToString();

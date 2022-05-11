@@ -2946,7 +2946,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c069bd0c300b743abf1acdfef97c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveNumber: 1
+  waveNumber: 15
   waveNumberDisplay: {fileID: 1978258079}
   waveActive: 0
   waveCooldownDisplay: {fileID: 1437825391}
@@ -2963,7 +2963,6 @@ MonoBehaviour:
   - {fileID: 1123717066}
   - {fileID: 1225773160}
   waveCreadits: 50
-  enemyCredits: 10
 --- !u!4 &1143081679
 Transform:
   m_ObjectHideFlags: 0

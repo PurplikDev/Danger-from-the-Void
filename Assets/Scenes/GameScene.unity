@@ -318,7 +318,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 73546704}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2, z: 0}
+  m_LocalPosition: {x: 0, y: -2.75, z: 0}
   m_LocalScale: {x: 17.000101, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1808,7 +1808,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 832790373}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.75, z: 0}
+  m_LocalPosition: {x: 0, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 432673232}
@@ -1833,9 +1833,10 @@ MonoBehaviour:
   armor: 5
   maxVis: 100
   vis: 100
+  visDiscount: 0.01
   defaultSpeed: 2.5
-  maxRange: 0.125
-  minRange: -0.125
+  maxRange: 0
+  minRange: 0
   fortActive: 0
 --- !u!61 &832790379
 BoxCollider2D:
@@ -2988,6 +2989,7 @@ MonoBehaviour:
   - {fileID: 1123717066}
   - {fileID: 1225773160}
   waveCredits: 2
+  maxWaveCredits: 5
   enemyAmount: 0
 --- !u!4 &1143081679
 Transform:

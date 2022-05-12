@@ -15,6 +15,7 @@ public class PlayerManager : MonoBehaviour
     [Header("Vis")]
     public float maxVis;
     public float vis;
+    public float visDiscount;
 
     [Header("Movement")]
     public float defaultSpeed;

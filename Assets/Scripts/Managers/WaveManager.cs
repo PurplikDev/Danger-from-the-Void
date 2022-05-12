@@ -20,7 +20,8 @@ public class WaveManager : MonoBehaviour
     public GameObject[] enemies;
 
     [Header("Spawning Credits")]
-    public int waveCredits = 50;
+    public int waveCredits = 0;
+    public int maxWaveCredits = 5;
 
     private float spawnCooldown = 2f;
 
@@ -30,7 +31,7 @@ public class WaveManager : MonoBehaviour
         waveNumberDisplay.text = waveNumber.ToString();
         waveActive = true;
         enemyAmount = 0;
-        waveCredits = 2;
+        waveCredits = maxWaveCredits;
     }
 
     void FixedUpdate()
@@ -124,6 +125,7 @@ public class WaveManager : MonoBehaviour
             waveCooldownTimer = 5;
 
             waveNumber++;
+            maxWaveCredits += maxWaveCredits;
         }
 
     }

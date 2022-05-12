@@ -21,6 +21,8 @@ public class PlayerCasting : MonoBehaviour
     public Transform gauntlet;
     public Transform castingPoint;
 
+    private int spellCost = 0;
+
     void Update() {
         if (Input.GetButtonDown("Fire1")) {
             SpellCast();
@@ -48,8 +50,14 @@ public class PlayerCasting : MonoBehaviour
     }
 
     void SpellCast() {
-        if(playerManager.vis > 20) {
-            playerManager.vis -= 20;
+
+        switch(selectedSpellID) {
+            case 0: spellCost = 20; break;
+            case 1: spellCost = 100; break;
+        }
+
+        if(playerManager.vis > spellCost) {
+            playerManager.vis -= spellCost * playerManager.visDiscount;
             playerVis.setVis(playerManager.vis);
             Instantiate(projectileSpell[selectedSpellID], castingPoint.position, gauntlet.rotation);
         }

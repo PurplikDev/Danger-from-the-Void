@@ -2557,6 +2557,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyManager: {fileID: 1123717070}
   enemyHealthBarSlider: {fileID: 1372272264}
+  waveManager: {fileID: 0}
 --- !u!114 &1123717068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2756,6 +2757,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyManager: {fileID: 1128898735}
   enemyHealthBarSlider: {fileID: 1764993457}
+  waveManager: {fileID: 0}
 --- !u!114 &1128898733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2946,7 +2948,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c069bd0c300b743abf1acdfef97c7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveNumber: 15
+  waveNumber: 1
   waveNumberDisplay: {fileID: 1978258079}
   waveActive: 0
   waveCooldownDisplay: {fileID: 1437825391}
@@ -2962,7 +2964,8 @@ MonoBehaviour:
   - {fileID: 1128898731}
   - {fileID: 1123717066}
   - {fileID: 1225773160}
-  waveCreadits: 50
+  waveCredits: 2
+  enemyAmount: 0
 --- !u!4 &1143081679
 Transform:
   m_ObjectHideFlags: 0
@@ -3261,6 +3264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyManager: {fileID: 1225773162}
   enemyHealthBarSlider: {fileID: 1346373493}
+  waveManager: {fileID: 0}
 --- !u!114 &1225773162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5056,6 +5060,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyManager: {fileID: 2060432226}
   enemyHealthBarSlider: {fileID: 1058681269}
+  waveManager: {fileID: 0}
 --- !u!114 &2060432224
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class EnemyHitDetection : MonoBehaviour
 {
 
     public EnemyHealth enemyDamage;
+
     private float attackCooldown = 0;
 
     void OnTriggerEnter2D(Collider2D collider) {

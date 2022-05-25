@@ -1193,7 +1193,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 522761878}
-  - component: {fileID: 522761879}
   m_Layer: 0
   m_Name: Enemy Spawners
   m_TagString: Untagged
@@ -1220,18 +1219,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &522761879
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 522761877}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6412e5c716ae83a48a744313f699b5da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &588319030
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,7 +1820,7 @@ MonoBehaviour:
   armor: 5
   maxVis: 100
   vis: 100
-  visDiscount: 0.01
+  visDiscount: 0.5
   defaultSpeed: 2.5
   maxRange: 0
   minRange: 0
@@ -5122,6 +5109,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978258077}
   m_CullTransparentMesh: 1
+--- !u!1001 &2040499552
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4100428655553385822, guid: 04a1c1fdf2887a24da09a2cf0c9b8179, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100428655553385822, guid: 04a1c1fdf2887a24da09a2cf0c9b8179, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100428655553385822, guid: 04a1c1fdf2887a24da09a2cf0c9b8179, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100428655553385822, guid: 04a1c1fdf2887a24da09a2cf0c9b8179, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100428655553385822, guid: 04a1c1fdf2887a24da09a2cf0c9b8179, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100428655553385822, guid: 04a1c1fdf2887a24da09a2cf0c9b8179, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100428655553385822, guid: 04a1c1fdf2887a24da09a2cf0c9b8179, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100428655553385822, guid: 04a1c1fdf2887a24da09a2cf0c9b8179, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100428655553385822, guid: 04a1c1fdf2887a24da09a2cf0c9b8179, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100428655553385822, guid: 04a1c1fdf2887a24da09a2cf0c9b8179, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100428655553385822, guid: 04a1c1fdf2887a24da09a2cf0c9b8179, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4100428655553385825, guid: 04a1c1fdf2887a24da09a2cf0c9b8179, type: 3}
+      propertyPath: m_Name
+      value: Cloud Spell
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 04a1c1fdf2887a24da09a2cf0c9b8179, type: 3}
 --- !u!1 &2060432222
 GameObject:
   m_ObjectHideFlags: 0

@@ -56,7 +56,7 @@ public class PlayerCasting : MonoBehaviour
             case 1: spellCost = 100; break;
         }
 
-        if(playerManager.vis > spellCost) {
+        if(playerManager.vis > (spellCost * playerManager.visDiscount)) {
             playerManager.vis -= spellCost * playerManager.visDiscount;
             playerVis.setVis(playerManager.vis);
             Instantiate(projectileSpell[selectedSpellID], castingPoint.position, gauntlet.rotation);

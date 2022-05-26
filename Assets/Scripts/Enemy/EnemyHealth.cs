@@ -8,7 +8,7 @@ public class EnemyHealth : MonoBehaviour
     public EnemyManager enemyManager;
     public Slider enemyHealthBarSlider;
 
-    public WaveManager waveManager;
+    public PlayerGoldCollection goldCollection;
 
 
 
@@ -27,6 +27,7 @@ public class EnemyHealth : MonoBehaviour
         if(enemyManager.health <= 0) {
             Destroy(gameObject);
             enemyManager.waveManager.enemyAmount--;
+            goldCollection.GiveGold();
         }
     }
 

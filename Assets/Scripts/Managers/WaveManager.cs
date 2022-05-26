@@ -27,6 +27,8 @@ public class WaveManager : MonoBehaviour
 
     public int enemyAmount = 0;
 
+    public ShopManager shopManager;
+
     void NewWave() {
         waveNumberDisplay.text = waveNumber.ToString();
         waveActive = true;
@@ -36,7 +38,10 @@ public class WaveManager : MonoBehaviour
 
     void FixedUpdate()
     {
-        waveCooldownTimer -= 1 * Time.fixedDeltaTime;
+        if(shopManager.shopActive == false)
+        { 
+            waveCooldownTimer -= 1 * Time.fixedDeltaTime; 
+        }
         waveCooldownDisplay.text = Mathf.Ceil(waveCooldownTimer).ToString();
 
 
@@ -45,11 +50,13 @@ public class WaveManager : MonoBehaviour
         {
             waveCooldownTimer = 0;
             waveCooldownPanel.SetActive(false);
+            shopManager.shopButton.SetActive(false);
 
             NewWave();
 
         } else if (waveCooldownTimer > 0 && waveActive == false) {
             waveCooldownPanel.SetActive(true);
+            shopManager.shopButton.SetActive(true);
         }
 
 

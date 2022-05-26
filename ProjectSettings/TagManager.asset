@@ -11,6 +11,7 @@ TagManager:
   - HealingEnemy
   - EnemySpawners
   - SpecialProjectile
+  - Deathzone Hitbox
   layers:
   - Default
   - TransparentFX

@@ -28,4 +28,10 @@ public class EnemyHitDetection : MonoBehaviour
             }
         }
     }
+
+    void OnCollisionEnter2D(Collision2D collider) {
+        if(collider.gameObject.CompareTag("Deathzone Hitbox")) {
+            enemyDamage.Damage(10000000);
+        }
+    }
 }

@@ -7,6 +7,7 @@ public class PlayerCasting : MonoBehaviour
 {
     public PlayerManager playerManager;
     public PlayerHealthArmorBar playerVis;
+    public ShopManager shopManager;
 
     [Header("Selected Spell by ID")]
     public int selectedSpellID = 0;
@@ -24,7 +25,7 @@ public class PlayerCasting : MonoBehaviour
     private int spellCost = 0;
 
     void Update() {
-        if (Input.GetButtonDown("Fire1")) {
+        if (Input.GetButtonDown("Fire1") && shopManager.shopActive == false) {
             SpellCast();
         }
 

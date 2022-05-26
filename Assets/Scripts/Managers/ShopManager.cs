@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShopManager : MonoBehaviour
 {
     public PlayerManager playerManager;
+    public PlayerHealthArmorBar healthAndArmor;
     public ShopOpener shopOpener;
 
     public GameObject shopButton;

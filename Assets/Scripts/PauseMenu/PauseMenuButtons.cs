@@ -7,7 +7,7 @@ public class PauseMenuButtons : MonoBehaviour
 {
     public PauseMenu pauseMenuLogic;
 
-    public void PlayGame() {
+    public void MainMenu() {
         SceneManager.LoadScene("MainMenu Scene");
     }
 

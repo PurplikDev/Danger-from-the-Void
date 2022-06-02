@@ -16,7 +16,6 @@ public class Purchases : MonoBehaviour
             shopManager.playerManager.gold -= 50;
             shopManager.playerManager.maxVis += 50;
             visStoragePurchases++;
-            Debug.Log(shopManager.playerManager.maxVis);
         }
     }
 
@@ -30,7 +29,6 @@ public class Purchases : MonoBehaviour
             shopManager.playerManager.visDiscount = Mathf.Ceil(shopManager.playerManager.visDiscount*10)/10;
 
             visDiscountPurchases++;
-            Debug.Log(shopManager.playerManager.visDiscount);
         }
     }
 
@@ -39,12 +37,16 @@ public class Purchases : MonoBehaviour
         if (shopManager.playerManager.gold >= 100)
         {
             shopManager.playerManager.gold -= 100;
-            shopManager.playerManager.visDiscount -= 0.1f;
+            shopManager.playerManager.playerHealthArmorBar.Heal(1);
+        }
+    }
 
-            shopManager.playerManager.visDiscount = Mathf.Ceil(shopManager.playerManager.visDiscount*10)/10;
-
-            visDiscountPurchases++;
-            Debug.Log(shopManager.playerManager.visDiscount);
+    public void BuySpeed()
+    {
+        if (shopManager.playerManager.gold >= 100)
+        {
+            shopManager.playerManager.gold -= 100;
+            shopManager.playerManager.defaultSpeed += 0.5f;
         }
     }
 }

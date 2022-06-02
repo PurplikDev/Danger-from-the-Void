@@ -40,7 +40,7 @@ public class PlayerHealthArmorBar : MonoBehaviour
         }
     }
 
-    void Heal(int heal) {
+    public void Heal(int heal) {
 
         if(playerManager.health >= playerManager.maxHealth) {
             return;

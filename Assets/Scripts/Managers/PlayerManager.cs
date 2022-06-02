@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    public PlayerHealthArmorBar playerHealthArmorBar;
+
     [Header("Health")]
     public int maxHealth;
     public int health;

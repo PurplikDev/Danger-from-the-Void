@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public PauseMenu pauseMenu;
+
     [Header("The Usual Stuff")]
     public Rigidbody2D playerRigidbody2D;
     public Transform playerBody;
@@ -19,9 +21,10 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-        Move();
-
-        Rotate();
+        if(pauseMenu.paused == false) {
+            Move();
+            Rotate();
+        }
     }
 
     void ProcessInputs()

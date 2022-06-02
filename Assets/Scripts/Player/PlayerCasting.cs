@@ -8,6 +8,7 @@ public class PlayerCasting : MonoBehaviour
     public PlayerManager playerManager;
     public PlayerHealthArmorBar playerVis;
     public ShopManager shopManager;
+    public PauseMenu pauseMenu;
 
     [Header("Selected Spell by ID")]
     public int selectedSpellID = 0;
@@ -25,28 +26,30 @@ public class PlayerCasting : MonoBehaviour
     private int spellCost = 0;
 
     void Update() {
-        if (Input.GetButtonDown("Fire1") && shopManager.shopActive == false) {
-            SpellCast();
-        }
-
-        if (Input.GetButtonDown("SwitchSpell")) {
-            if(selectedSpellID <= (projectileSpell.Length - 2)){
-                selectedSpellID++;
-                switch (selectedSpellID)
-                {
-                    case 1:
-                        spellIcon.GetComponent<Image>().color = new Color32(76,255,76,255);
-                        break;
-
-                    default: 
-                        Debug.Log("dsafsdfsd");
-                        break;
-                }
-            } else {
-                selectedSpellID = 0;
-                spellIcon.GetComponent<Image>().color = new Color32(180,75,250,255);
+        if(pauseMenu.paused == false) {
+            if (Input.GetButtonDown("Fire1") && shopManager.shopActive == false) {
+                SpellCast();
             }
-        
+
+            if (Input.GetButtonDown("SwitchSpell")) {
+                if(selectedSpellID <= (projectileSpell.Length - 2)){
+                    selectedSpellID++;
+                    switch (selectedSpellID)
+                    {
+                        case 1:
+                            spellIcon.GetComponent<Image>().color = new Color32(76,255,76,255);
+                            break;
+
+                        default: 
+                            Debug.Log("dsafsdfsd");
+                            break;
+                    }
+                } else {
+                    selectedSpellID = 0;
+                    spellIcon.GetComponent<Image>().color = new Color32(180,75,250,255);
+                }
+            
+            }
         }
     }
 
@@ -57,7 +60,7 @@ public class PlayerCasting : MonoBehaviour
             case 1: spellCost = 100; break;
         }
 
-        if(playerManager.vis > (spellCost * playerManager.visDiscount)) {
+        if(playerManager.vis >= (spellCost * playerManager.visDiscount)) {
             playerManager.vis -= spellCost * playerManager.visDiscount;
             playerVis.setVis(playerManager.vis);
             Instantiate(projectileSpell[selectedSpellID], castingPoint.position, gauntlet.rotation);
